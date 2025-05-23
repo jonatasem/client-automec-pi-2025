@@ -1,0 +1,28 @@
+.register-customer {
+  .create-client {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .btn-create {
+      margin-top: 10px;
+
+      button {
+        background-color: #2ecc71; /* Cor secundária */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

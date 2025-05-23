@@ -1,0 +1,115 @@
+
+.title-default {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  color: #3498db;
+}
+
+//loading
+.loading {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.success-message {
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.no-results {
+  text-align: center;
+  margin: 1rem auto;
+  color: #999;
+  font-style: italic;
+}
+
+//geral das paginas
+.container-dashboard,
+.register-customer,
+.container-sales,
+.register-product,
+.registered-customers,
+.registered-products,
+.make-sale {
+  padding: 1.5rem;
+}
+
+//container principal
+.container-app {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+
+  .app-left,
+  .app-right {
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    transition-duration: 1s;
+  }
+
+  //header
+  .app-left {
+    width: 300px;
+    min-height: 100vh;
+    left: 0;
+    z-index: 2;
+  }
+
+  //outlet
+  .app-right {
+    width: calc(100% - 300px);
+    left: 300px;
+  }
+
+  //container mobile
+  .container-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem 1.5rem;
+
+    button {
+      background-color: transparent;
+      border: transparent;
+      font-size: 35px;
+    }
+  }
+}
+
+//responsivo para encolher o header
+@media (max-width: 1199px) {
+  .container-app {
+    .app-left {
+      transform: translateX(-350px);
+    }
+    .app-right {
+      width: calc(100%);
+      left: 0;
+    }
+    .container-mobile {
+      display: block;
+    }
+    .header-mobile {
+      transform: translateX(0);
+      z-index: 3;
+    }
+  }
+}
+
+.dropdown-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  background-color: #fff; // Ou outra cor de fundo
+  border: 1px solid #ddd; // Borda para o dropdown
+  border-radius: 5px;
+  position: absolute; // Para posicionar o dropdown
+  z-index: 1000; // Para garantir que fique acima de outros elementos
+}

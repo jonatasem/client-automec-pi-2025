@@ -1,0 +1,146 @@
+.container-dashboard {
+  .report {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      color: #ff000088;
+      padding: 0.5rem;
+      border-radius: 0.2rem;
+      background-color: #ffffff;
+
+      &:hover {
+        color: red;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ff000088;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  .home-head {
+    display: flex;
+    justify-content: space-around;
+
+    .menu-dash {
+      width: calc(100% / 4 - 1.5rem);
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      color: white;
+
+      p {
+        font-size: 25px;
+      }
+      &.menu-registered-product {
+        background: #b796fa;
+        background: linear-gradient(
+          90deg,
+          rgba(183, 150, 250, 1) 0%,
+          rgba(77, 31, 168, 1) 100%
+        );
+      }
+      &.menu-made-sale {
+        background: #ffbfd2;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 191, 210, 1) 0%,
+          rgba(252, 90, 135, 1) 100%
+        );
+      }
+      &.menu-registered-customer {
+        background: #87ffd7;
+        background: linear-gradient(
+          90deg,
+          rgba(135, 255, 215, 1) 0%,
+          rgba(18, 177, 123, 1) 100%
+        );
+      }
+      &.menu-earnings-month {
+        background: #f7d28d;
+        background: linear-gradient(
+          90deg,
+          rgba(247, 210, 141, 1) 0%,
+          rgba(255, 165, 0, 1) 100%
+        );
+
+        .icon {
+          margin-right: 0.2rem;
+        }
+      }
+
+      .left {
+        font-size: 30px;
+        margin: 0 1rem 0 0;
+
+        h3 {
+          font-size: 25px;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .container-dashboard {
+    .home-head {
+      flex-wrap: wrap;
+
+      .menu-dash {
+        width: calc(100% / 2 - 1.5rem);
+        margin: 0.5rem 0;
+
+        .left {
+          h2 {
+            font-size: 30px;
+          }
+        }
+        .right {
+          h3 {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .container-dashboard {
+    .report {
+      a {
+        font-size: 12px;
+      }
+    }
+
+    .home-head {
+      .menu-dash {
+        width: calc(100%);
+        margin: 0.5rem 0 0;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

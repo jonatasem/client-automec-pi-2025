@@ -1,0 +1,116 @@
+.registered-customers {
+  padding: 1.5rem;
+
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+
+  .clients-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // Espaçamento entre os cartões
+
+    .client-card {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+
+      .client-header {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+          margin-right: 10px;
+        }
+
+        span {
+          flex-grow: 1;
+          font-weight: bold;
+        }
+
+        svg {
+          margin-left: 10px;
+          transition: transform 0.2s;
+        }
+
+        button {
+          background-color: transparent;
+          border: transparent;
+          cursor: pointer;
+          font-size: 15px;
+        }
+      }
+
+      .client-details {
+        margin-top: 10px;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+
+        p {
+          margin: 5px 0;
+          font-size: 0.9em;
+        }
+
+        strong {
+          color: #555;
+        }
+      }
+    }
+  }
+
+  .clients-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s;
+
+      &.delete-button {
+        background-color: #ff4d4d;
+        color: white;
+
+        &:hover {
+          background-color: #e60000;
+        }
+
+        &:disabled {
+          background-color: #f5c6cb;
+          cursor: not-allowed;
+        }
+      }
+
+      &.export-button {
+        background-color: #007bff;
+        color: white;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+
+        &:disabled {
+          background-color: #cce5ff;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

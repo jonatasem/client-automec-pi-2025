@@ -1,0 +1,63 @@
+.register-product {
+  .create-product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: #aaa;
+      }
+
+      &:focus {
+        border-color: #3498db;
+        outline: none;
+      }
+
+      &[type="number"] {
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+
+    .create-product-center {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+
+      input[type="number"] {
+        width: 100px;
+        margin-left: 0.5rem;
+        text-align: center;
+      }
+    }
+
+    .btn-create {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+      button {
+        background-color: #3498db; /* Cor primária */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+    }
+  }
+}

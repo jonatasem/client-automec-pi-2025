@@ -1,0 +1,11 @@
+.container-chart {
+  border-radius: 0.5rem;
+  margin: 2rem 0 0 0;
+  width: 100%;
+
+  .chart {
+    width: calc(100%);
+    margin: 0 auto;
+    max-height: 400px;
+  }
+}
