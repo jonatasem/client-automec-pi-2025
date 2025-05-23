@@ -19,7 +19,7 @@ export default function SalesMade() {
   };
 
   const downloadQRCode = async (sale) => {
-    const saleInfoURL = `https://client-automec-pi-2025.vercel.app/invoice/${sale.id}`;
+    const saleInfoURL = `http://localhost:5173/invoice/${sale.id}`;
     const canvas = document.createElement("canvas");
     await QRCode.toCanvas(canvas, saleInfoURL, { errorCorrectionLevel: "H" });
     canvas.toBlob((blob) => {

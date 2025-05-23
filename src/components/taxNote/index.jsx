@@ -32,17 +32,17 @@ export default function TaxNote() {
     return <div className="loading">Carregando...</div>;
   if (salesError)
     return (
-      <div className="error-loading">
+      <div className="no-results">
         Erro ao buscar venda: {salesError.message}
       </div>
     );
   if (clientsError)
     return (
-      <div className="error-loading">
+      <div className="no-results">
         Erro ao buscar cliente: {clientsError.message}
       </div>
     );
-  if (!sale) return <div className="error-loading">Venda não encontrada.</div>;
+  if (!sale) return <div className="no-results">Venda não encontrada.</div>;
 
   const generatePDF = () => {
     const button = invoiceRef.current.querySelector(".invoice-footer button");
